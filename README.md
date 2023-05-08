@@ -18,3 +18,15 @@ Installation instructions can be found at the top of the theme CSS files.
 
 ![](https://github.com/DavidFuchs/trilium-chameleon-theme/raw/main/preview-dark.png)
 ![](https://github.com/DavidFuchs/trilium-chameleon-theme/raw/main/preview-light.png)
+
+## Alternate Previews
+
+These screenshots were taken after modifying the value of `--palette-accent-hue`.
+
+### `--palette-accent-hue=20`:
+
+![](https://github.com/DavidFuchs/trilium-chameleon-theme/raw/main/preview-dark-alternate.png)
+
+### `--palette-accent-hue=320`:
+
+![](https://github.com/DavidFuchs/trilium-chameleon-theme/raw/main/preview-light-alternate.png)
