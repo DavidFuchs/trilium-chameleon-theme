@@ -19,7 +19,10 @@ called `--palette-accent-hue` to a different number between 0 and 359. Red is 0,
  
 # Installation
 
-Installation instructions can be found at the top of the theme CSS files.
+Installation instructions can be found at the top of the theme CSS files:
+
+* [chameleon-dark.css](https://github.com/DavidFuchs/trilium-chameleon-theme/raw/main/chameleon-dark.css)
+* [chameleon-light.css](https://github.com/DavidFuchs/trilium-chameleon-theme/raw/main/chameleon-light.css)
 
 # Preview Images
 
