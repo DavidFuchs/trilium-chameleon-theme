@@ -8,7 +8,14 @@ These light and dark themes makes liberal use of variables and relative brightne
 the eyes, and very simple to adjust to your preference. Accent colors, text colors, and background colors are all easily adjustable.
  
 By default, the themes use a teal colour that I happen to like. But you can change the accent everywhere simply by modifying the variable
-called `--palette-accent-hue` to a different number between 0 and 359. Red is 0, for example. Text and background brightness can be similarly adjusted.
+called `--palette-accent-hue` to a different number between 0 and 359. Red is 0, for example. Accent, text and background brightness can be similarly adjusted using variables:
+
+```
+  --palette-accent-hue: 185;
+  --palette-accent-brightness: 40%;
+  --palette-text-brightness: 70%;
+  --palette-background-brightness: 20%;
+```
  
 # Installation
 
