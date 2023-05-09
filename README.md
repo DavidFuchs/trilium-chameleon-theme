@@ -2,11 +2,9 @@
 
 Chameleon: A custom colour theme for Trilium. (https://github.com/zadam/trilium)
  
-These light and dark themes makes liberal use of variables and relative brightness calculations to provide a theme that's both easy on
-the eyes, and very simple to adjust to your preference. Accent colors, text colors, and background colors are all easily adjustable.
+These light and dark themes makes liberal use of variables and relative brightness calculations to provide a theme that's both easy on the eyes, and very simple to adjust to your preference. Accent colors, text colors, and background colors are all easily adjustable.
  
-By default, the themes use a teal colour that I happen to like. But you can change the accent everywhere simply by modifying the variable
-called `--palette-accent-hue` to a different number between 0 and 359. Red is 0, for example. Accent, text and background brightness can be similarly adjusted using variables:
+By default, the themes use a teal colour that I happen to like. But you can change the accent everywhere simply by modifying the variable called `--palette-accent-hue` to a different number between 0 and 359. Red is 0, for example. Accent, text and background brightness can be similarly adjusted using variables:
 
 ```
   --palette-accent-hue: 185;
@@ -14,7 +12,10 @@ called `--palette-accent-hue` to a different number between 0 and 359. Red is 0,
   --palette-text-brightness: 70%;
   --palette-background-brightness: 20%;
 ```
- 
+
+These themes can also be used on any pages you share to the public (only possible on a Server install), by adding a few labels
+to your shared pages. Details are in the instructions found in the CSS files themselves.
+
 # Installation
 
 Installation instructions can be found at the top of the theme CSS files:
