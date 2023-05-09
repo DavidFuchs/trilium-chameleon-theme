@@ -19,8 +19,8 @@
  * Sharing:
  *   These themes can also be used for any pages you share publicly from a server instance of Trilium. In order to use
  *   this CSS when sharing a page, take the following steps:
- *   1. Clone the 'Chameleon (Light)' note you created somewhere under the page you shared. This is important because Trilium require
- *      that the CSS is also shared.
+ *   1. Clone the 'Chameleon (Dark)' note you created somewhere under the page you shared. This is important because, for security reasons,
+ *      Trilium requires that the CSS is also shared.
  *   2. Add a label to the theme note called '#shareHiddenFromTree', so that the theme itself doesn't show up in the shared content.
  *   3. Add the following label to the page you're sharing - the best way to do this is to click the + button on the
  *      basic attributes page, and click Add new relation - make sure the inheritable checkbox is enabled if you want the theme to be
