@@ -57,13 +57,13 @@
 
   --mermaid-theme: dark;
 
-  --main-font-family: var(--ui-font), sans-serif;
+  --main-font-family: var(--ui-font), 'Arial';
   --main-font-size: normal;
 
-  --tree-font-family: var(--ui-font), sans-serif;
+  --tree-font-family: var(--ui-font), 'Arial';
   --tree-font-size: normal;
 
-  --detail-font-family: var(--ui-font), sans-serif;
+  --detail-font-family: var(--ui-font), 'Arial';
   --detail-font-size: normal;
 
   --monospace-font-family: 'Inconsolata', 'JetBrainsLight';
@@ -168,4 +168,29 @@ body .global-menu-button:not(:hover) {
 
 body .CodeMirror {
   filter: invert(100%) hue-rotate(180deg);
+}
+
+/* Below selectors are for Sharing mode. */
+body[data-note-id] {
+  background-color: var(--launcher-pane-background-color);
+  color: var(--launcher-pane-text-color);
+  font-family: 'Arial';
+}
+
+body[data-note-id] #layout {
+  background-color: var(--left-pane-background-color);
+  color: var(--left-pane-text-color);
+}
+
+body[data-note-id] #main {
+  background-color: var(--main-background-color);
+  color: var(--main-text-color);
+}
+
+body[data-note-id] a {
+  color: var(--link-color);
+}
+
+body[data-note-id] pre {
+  padding: 1em;
 }
