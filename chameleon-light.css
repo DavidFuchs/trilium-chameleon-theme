@@ -16,6 +16,16 @@
  *   4. Open the top-left menu, select 'Options', and then open the 'Appearance' window.
  *   5. Select 'Chameleon (Light)' from the 'Theme' drop-down.
  *
+ * Sharing:
+ *   These themes can also be used for any pages you share publicly from a server instance of Trilium. In order to use
+ *   this CSS when sharing a page, take the following steps:
+ *   1. Clone the 'Chameleon (Light)' note you created somewhere under the page you shared. This is important because Trilium require
+ *      that the CSS is also shared.
+ *   2. Add a label to the theme note called '#shareHiddenFromTree', so that the theme itself doesn't show up in the shared content.
+ *   3. Add the following label to the page you're sharing - the best way to do this is to click the + button on the
+ *      basic attributes page, and click Add new relation - make sure the inheritable checkbox is enabled if you want the theme to be
+ *      use for all child pages as well: ~shareCss(inheritable)=Chameleon (Light)
+ *
  * Trilium Theming docs: http://github.com/zadam/trilium/wiki/Themes
  * Trilium Theme gallery: https://github.com/zadam/trilium/wiki/Theme-Gallery
  */
@@ -57,13 +67,13 @@
 
   --mermaid-theme: default;
 
-  --main-font-family: sans-serif;
+  --main-font-family: 'Arial';
   --main-font-size: normal;
 
-  --tree-font-family: sans-serif;
+  --tree-font-family: 'Arial';
   --tree-font-size: normal;
 
-  --detail-font-family: sans-serif;
+  --detail-font-family: 'Arial';
   --detail-font-size: normal;
 
   --monospace-font-family: 'Inconsolata', 'JetBrainsLight';
@@ -166,7 +176,7 @@ body .global-menu-button:not(:hover) {
   margin-left: 6px;
 }
 
-/* Below selectors are for Sharing mode. */
+/* Below selectors are used only for Sharing mode. */
 body[data-note-id] {
   background-color: var(--launcher-pane-background-color);
   color: var(--launcher-pane-text-color);
