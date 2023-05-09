@@ -13,8 +13,7 @@ By default, the themes use a teal colour that I happen to like. But you can chan
   --palette-background-brightness: 20%;
 ```
 
-These themes can also be used on any pages you share to the public (only possible on a Server install), by adding a few labels
-to your shared pages. Details are in the instructions found in the CSS files themselves.
+These themes can also be used on any pages you share to the public (only possible on a Server install), with a few simple steps. Details are in the instructions found in the CSS files themselves.
 
 # Installation
 
