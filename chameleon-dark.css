@@ -5,7 +5,9 @@
  * and very simple to adjust to your preference. Accent colors, text colors, and background colors are all easily adjustable.
  *
  * By default, the theme use a teal colour that I happen to like. But you can change the accent everywhere simply by modifying
- * the variable called '--palette-accent-hue' to a different number between 0 and 359. Red is 0, for example.
+ * the variable called '--palette-accent-hue' to a different number between 0 and 359. These numbers represent the colors of an
+ * RGB color wheel. Red is 0, Orange is about 30, etc. (See https://en.wikipedia.org/wiki/Color_wheel) The default hue is 185,
+ * which is a lovely teal color.
  *
  * This is the dark variant of the theme. There is also a light variant.
  *
