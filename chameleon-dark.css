@@ -1,0 +1,254 @@
+/*
+ * Chameleon (Dark): A custom colour theme for Trilium Next. (https://github.com/DavidFuchs/trilium-chameleon-theme)
+ *
+ * This theme makes liberal use of variables and relative brightness calculations to provide a theme that's both easy on the eyes,
+ * and very simple to adjust to your preference. Accent colors, text colors, and background colors are all easily adjustable.
+ *
+ * By default, the theme use a teal colour that I happen to like. But you can change the accent everywhere simply by modifying
+ * the variable called '--palette-accent-hue' to a different number between 0 and 359. Red is 0, for example.
+ *
+ * This is the dark variant of the theme. There is also a light variant.
+ *
+ * Installation:
+ *   1. Create a new note in Trilium called 'Chameleon (Dark)'. Set the 'Note type' to 'CSS', and add a label `#appTheme=chameleon-dark`.
+ *   2. Paste the contents of this document into the note.
+ *   3. (Optional, but recommended) Install the code font by uploading it as a child document of the new CSS note.
+ *   4. Open the top-left menu, select 'Options', and then open the 'Appearance' window.
+ *   5. Select 'Chameleon (Dark)' from the 'Theme' drop-down.
+ *
+ * Trilium Theming docs: https://triliumnext.github.io/Docs/Wiki/themes
+ * Trilium Theme gallery: https://triliumnext.github.io/Docs/Wiki/theme-gallery.html
+ */
+
+/* Used only for the code font. It's recommended that you install this or an alternative. 'JetBrainsLight' (built-in) will be used as a fallback. */
+@font-face {
+  font-family: "Inconsolata";
+  src: url("../../../custom/fonts/InconsolataNerdFontMono-Bold.woff2")
+    format("woff2");
+}
+
+:root {
+  /* It's generally sufficient to modify just this first set of variables. */
+  --palette-accent-hue: 185;
+  --palette-accent-brightness: 40%;
+  --palette-text-brightness: 70%;
+  --palette-background-brightness: 20%;
+
+  --ui-font: sans-serif;
+
+  /* The below variables are relative to the above selections. */
+  --palette-accent-lighter1: hsl(
+    var(--palette-accent-hue),
+    100%,
+    calc(var(--palette-accent-brightness) + 10%)
+  );
+  --palette-accent-default: hsl(
+    var(--palette-accent-hue),
+    100%,
+    var(--palette-accent-brightness)
+  );
+  --palette-accent-darker1: hsl(
+    var(--palette-accent-hue),
+    100%,
+    calc(var(--palette-accent-brightness) - 10%)
+  );
+
+  --palette-text-lighter1: hsl(
+    230,
+    10%,
+    calc(var(--palette-text-brightness) + 20%)
+  );
+  --palette-text-default: hsl(230, 10%, var(--palette-text-brightness));
+  --palette-text-darker1: hsl(
+    230,
+    10%,
+    calc(var(--palette-text-brightness) - 20%)
+  );
+
+  --palette-background-lighter2: hsl(
+    230,
+    10%,
+    calc(var(--palette-background-brightness) + 10%)
+  );
+  --palette-background-lighter1: hsl(
+    230,
+    10%,
+    calc(var(--palette-background-brightness) + 5%)
+  );
+  --palette-background-default: hsl(
+    230,
+    10%,
+    var(--palette-background-brightness)
+  );
+  --palette-background-darker1: hsl(
+    230,
+    10%,
+    calc(var(--palette-background-brightness) - 5%)
+  );
+  --palette-background-darker2: hsl(
+    230,
+    10%,
+    calc(var(--palette-background-brightness) - 10%)
+  );
+
+  --palette-contrast-default: white;
+  --palette-contrast-inverted: black;
+}
+
+:root {
+  --theme-style: dark;
+
+  --mermaid-theme: dark;
+
+  --main-font-family: var(--ui-font), sans-serif;
+  --main-font-size: normal;
+
+  --tree-font-family: var(--ui-font), sans-serif;
+  --tree-font-size: normal;
+
+  --detail-font-family: var(--ui-font), sans-serif;
+  --detail-font-size: normal;
+
+  --monospace-font-family: "Inconsolata", "JetBrainsLight";
+  --monospace-font-size: normal;
+
+  --main-background-color: var(--palette-background-default);
+  --main-text-color: var(--palette-text-default);
+  --main-border-color: var(--palette-text-darker1);
+
+  --accented-background-color: var(--palette-background-default);
+  --more-accented-background-color: var(--palette-background-darker1);
+
+  --button-text-color: var(--palette-text-default);
+  --button-background-color: var(--palette-background-default);
+  --button-disabled-text-color: var(--palette-text-default);
+  --button-disabled-background-color: var(--palette-text-darker1);
+  --button-border-color: var(--palette-background-lighter1);
+  --button-border-radius: 3px;
+
+  --primary-button-text-color: var(--palette-contrast-default);
+  --primary-button-background-color: var(--palette-accent-default);
+  --primary-button-border-color: var(--palette-accent-darker1);
+
+  /* Used by toolbar buttons at the top of notes. */
+  --muted-text-color: var(--palette-text-default);
+
+  /* Used by the title of notes. Background doesn't appear to be used? */
+  --input-text-color: var(--palette-text-default);
+  --input-background-color: var(--palette-background-darker1);
+
+  /* Used when hovering over context menu items. */
+  --hover-item-text-color: var(--palette-contrast-default);
+  --hover-item-background-color: var(--palette-accent-darker1);
+
+  /* Used for the selected item in the tree view. */
+  --active-item-text-color: var(--palette-contrast-default);
+  --active-item-background-color: var(--palette-accent-darker1);
+
+  /* Context menu text color. */
+  --menu-text-color: var(--palette-text-default);
+  --menu-background-color: var(--palette-background-default);
+
+  /* Modal dialogs (e.g. deleting a note). */
+  --modal-background-color: var(--palette-background-default);
+  --modal-backdrop-color: var(--palette-contrast-inverted);
+
+  /* This is the tree view. */
+  --left-pane-background-color: var(--palette-background-darker1);
+  --left-pane-text-color: var(--palette-text-default);
+
+  /* This is the gutter to the left of the tree view. */
+  --launcher-pane-background-color: var(--palette-background-default);
+  --launcher-pane-text-color: var(--palette-text-darker1);
+
+  /* Currently selected tab. */
+  --active-tab-text-color: var(--palette-contrast-default);
+  --active-tab-background-color: var(--palette-accent-darker1);
+  --active-tab-hover-background-color: var(--palette-accent-default);
+
+  /* Unselected tabs. */
+  --inactive-tab-text-color: var(--palette-text-default);
+  --inactive-tab-background-color: var(--palette-background-lighter1);
+  --inactive-tab-hover-background-color: var(--palette-background-lighter2);
+
+  /* Scrollbar border; unfortunately, there is no variable for the scrollbar that doesn't affect other items. */
+  --scrollbar-border-color: var(--palette-accent-darker1);
+
+  /* Tooltips. */
+  --tooltip-background-color: var(--palette-background-default);
+
+  /* Hyperlinks. */
+  --link-color: var(--palette-accent-default);
+}
+
+/* Ensure the colour of disabled items doesn't look like it's from a different palette. */
+#context-menu-container .dropdown-item.disabled {
+  color: var(--palette-text-darker1) !important;
+}
+
+/* The background on the search button looks out of place. */
+button.search-button {
+  background-color: transparent !important;
+}
+
+/* Doesn't seem to be a variable to control the box shadow, so let's just disable it. */
+* {
+  box-shadow: none !important;
+}
+
+/* Make 'To Do' items in tree use the accent color, instead of bright red. */
+span.fancytree-node.todo .fancytree-title {
+  color: var(--palette-accent-default) !important;
+}
+
+.fancytree-title {
+  font-size: 1em !important;
+}
+
+.fancytree-custom-icon {
+  font-size: 1.25em !important;
+}
+
+.tree-wrapper .unhoist-button {
+  font-size: 150% !important;
+}
+
+/* Let's gooder up the menu button, Bubbs. */
+body .global-menu-button:not(:hover) {
+  background-color: transparent;
+  filter: invert(50%) sepia(100%)
+    hue-rotate(calc((var(--palette-accent-hue) - 52) * 1deg)) saturate(1000%)
+    brightness(85%);
+  width: 41px;
+  margin-left: 6px;
+}
+
+body .CodeMirror {
+  filter: invert(100%) hue-rotate(180deg);
+}
+
+/* Below selectors are for Sharing mode. */
+body[data-note-id] {
+  background-color: var(--launcher-pane-background-color);
+  color: var(--launcher-pane-text-color);
+  font-family: var(--main-font-family);
+}
+
+body[data-note-id] #layout {
+  background-color: var(--left-pane-background-color);
+  color: var(--left-pane-text-color);
+}
+
+body[data-note-id] #main {
+  background-color: var(--main-background-color);
+  color: var(--main-text-color);
+}
+
+body[data-note-id] a {
+  color: var(--link-color);
+}
+
+body[data-note-id] pre {
+  padding: 1em;
+  filter: invert(100%);
+}
