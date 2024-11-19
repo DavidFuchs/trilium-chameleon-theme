@@ -217,7 +217,7 @@ span.fancytree-node.todo .fancytree-title {
 body .global-menu-button:not(:hover) {
   background-color: transparent;
   filter: invert(50%) sepia(100%)
-    hue-rotate(calc((var(--palette-accent-hue) - 52) * 1deg)) saturate(2500%)
+    hue-rotate(calc((var(--palette-accent-hue) - 52) * 1deg)) saturate(1000%)
     brightness(85%);
   width: 41px;
   margin-left: 6px;

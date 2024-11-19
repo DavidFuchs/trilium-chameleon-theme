@@ -29,7 +29,7 @@
 
 :root {
   /* It's generally sufficient to modify just this first set of variables. */
-  --palette-accent-hue: 185;
+  --palette-accent-hue: 5;
   --palette-accent-brightness: 25%;
   --palette-text-brightness: 30%;
   --palette-background-brightness: 90%;
@@ -217,7 +217,7 @@ span.fancytree-node.todo .fancytree-title {
 body .global-menu-button:not(:hover) {
   background-color: transparent;
   filter: invert(50%) sepia(100%)
-    hue-rotate(calc((var(--palette-accent-hue) - 52) * 1deg)) saturate(2500%)
+    hue-rotate(calc((var(--palette-accent-hue) - 52) * 1deg)) saturate(1000%)
     brightness(85%);
   width: 41px;
   margin-left: 6px;
