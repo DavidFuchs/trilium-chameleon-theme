@@ -29,7 +29,7 @@
 
 :root {
   /* It's generally sufficient to modify just this first set of variables. */
-  --palette-accent-hue: 200;
+  --palette-accent-hue: 185;
   --palette-accent-brightness: 40%;
   --palette-text-brightness: 70%;
   --palette-background-brightness: 20%;
