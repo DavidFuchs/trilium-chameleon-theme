@@ -1,13 +1,11 @@
 /*
- * Chameleon (Light): A custom colour theme for Trilium. (https://github.com/DavidFuchs/trilium-chameleon-theme)
+ * Chameleon (Light): A custom colour theme for Trilium Next. (https://github.com/DavidFuchs/trilium-chameleon-theme)
  *
  * This theme makes liberal use of variables and relative brightness calculations to provide a theme that's both easy on the eyes,
  * and very simple to adjust to your preference. Accent colors, text colors, and background colors are all easily adjustable.
  *
  * By default, the theme use a teal colour that I happen to like. But you can change the accent everywhere simply by modifying
- * the variable called '--palette-accent-hue' to a different number between 0 and 359. These numbers represent the colors of an
- * RGB color wheel. Red is 0, Orange is about 30, etc. (See https://en.wikipedia.org/wiki/Color_wheel) The default hue is 185,
- * which is a lovely teal color.
+ * the variable called '--palette-accent-hue' to a different number between 0 and 359. Red is 0, for example.
  *
  * This is the light variant of the theme. There is also a dark variant.
  *
@@ -18,24 +16,15 @@
  *   4. Open the top-left menu, select 'Options', and then open the 'Appearance' window.
  *   5. Select 'Chameleon (Light)' from the 'Theme' drop-down.
  *
- * Sharing:
- *   These themes can also be used for any pages you share publicly from a server instance of Trilium. In order to use
- *   this CSS when sharing a page, take the following steps:
- *   1. Clone the 'Chameleon (Light)' note you created somewhere under the page you shared. This is important because, for security reasons,
- *      Trilium requires that the CSS is also shared.
- *   2. Add a label to the theme note called '#shareHiddenFromTree', so that the theme itself doesn't show up in the shared content.
- *   3. Add the following label to the page you're sharing - the best way to do this is to click the + button on the
- *      basic attributes page, and click Add new relation - make sure the inheritable checkbox is enabled if you want the theme to be
- *      use for all child pages as well: ~shareCss(inheritable)=Chameleon (Light)
- *
- * Trilium Theming docs: http://github.com/zadam/trilium/wiki/Themes
- * Trilium Theme gallery: https://github.com/zadam/trilium/wiki/Theme-Gallery
+ * Trilium Theming docs: https://triliumnext.github.io/Docs/Wiki/themes
+ * Trilium Theme gallery: https://triliumnext.github.io/Docs/Wiki/theme-gallery.html
  */
 
 /* Used only for the code font. It's recommended that you install this or an alternative. 'JetBrainsLight' (built-in) will be used as a fallback. */
 @font-face {
-  font-family: 'Inconsolata';
-  src: url('../../../custom/fonts/InconsolataNerdFontMono-Bold.woff2') format('woff2');
+  font-family: "Inconsolata";
+  src: url("../../../custom/fonts/InconsolataNerdFontMono-Bold.woff2")
+    format("woff2");
 }
 
 :root {
@@ -45,20 +34,62 @@
   --palette-text-brightness: 30%;
   --palette-background-brightness: 90%;
 
+  --ui-font: sans-serif;
+
   /* The below variables are relative to the above selections. */
-  --palette-accent-lighter1: hsl(var(--palette-accent-hue), 100%, calc(var(--palette-accent-brightness) + 10%));
-  --palette-accent-default: hsl(var(--palette-accent-hue), 100%, var(--palette-accent-brightness));
-  --palette-accent-darker1: hsl(var(--palette-accent-hue), 100%, calc(var(--palette-accent-brightness) - 10%));
+  --palette-accent-lighter1: hsl(
+    var(--palette-accent-hue),
+    100%,
+    calc(var(--palette-accent-brightness) + 10%)
+  );
+  --palette-accent-default: hsl(
+    var(--palette-accent-hue),
+    100%,
+    var(--palette-accent-brightness)
+  );
+  --palette-accent-darker1: hsl(
+    var(--palette-accent-hue),
+    100%,
+    calc(var(--palette-accent-brightness) - 10%)
+  );
 
-  --palette-text-lighter1: hsl(230, 10%, calc(var(--palette-text-brightness) - 20%));
+  --palette-text-lighter1: hsl(
+    230,
+    10%,
+    calc(var(--palette-text-brightness) - 20%)
+  );
   --palette-text-default: hsl(230, 10%, var(--palette-text-brightness));
-  --palette-text-darker1: hsl(230, 10%, calc(var(--palette-text-brightness) + 20%));
+  --palette-text-darker1: hsl(
+    230,
+    10%,
+    calc(var(--palette-text-brightness) + 20%)
+  );
 
-  --palette-background-lighter2: hsl(230, 10%, calc(var(--palette-background-brightness) + 10%));
-  --palette-background-lighter1: hsl(230, 10%, calc(var(--palette-background-brightness) + 5%));
-  --palette-background-default: hsl(230, 10%, var(--palette-background-brightness));
-  --palette-background-darker1: hsl(230, 10%, calc(var(--palette-background-brightness) - 5%));
-  --palette-background-darker2: hsl(230, 10%, calc(var(--palette-background-brightness) - 10%));
+  --palette-background-lighter2: hsl(
+    230,
+    10%,
+    calc(var(--palette-background-brightness) + 10%)
+  );
+  --palette-background-lighter1: hsl(
+    230,
+    10%,
+    calc(var(--palette-background-brightness) + 5%)
+  );
+  --palette-background-default: hsl(
+    230,
+    10%,
+    var(--palette-background-brightness)
+  );
+  --palette-background-darker1: hsl(
+    230,
+    10%,
+    calc(var(--palette-background-brightness) - 5%)
+  );
+  --palette-background-darker2: hsl(
+    230,
+    10%,
+    calc(var(--palette-background-brightness) - 10%)
+  );
 
   --palette-contrast-default: white;
   --palette-contrast-inverted: black;
@@ -69,16 +100,16 @@
 
   --mermaid-theme: default;
 
-  --main-font-family: 'Arial';
+  --main-font-family: var(--ui-font), sans-serif;
   --main-font-size: normal;
 
-  --tree-font-family: 'Arial';
+  --tree-font-family: var(--ui-font), sans-serif;
   --tree-font-size: normal;
 
-  --detail-font-family: 'Arial';
+  --detail-font-family: var(--ui-font), sans-serif;
   --detail-font-size: normal;
 
-  --monospace-font-family: 'Inconsolata', 'JetBrainsLight';
+  --monospace-font-family: "Inconsolata", "JetBrainsLight";
   --monospace-font-size: normal;
 
   --main-background-color: var(--palette-background-default);
@@ -170,19 +201,33 @@ span.fancytree-node.todo .fancytree-title {
   color: var(--palette-accent-default) !important;
 }
 
+.fancytree-title {
+  font-size: 1em !important;
+}
+
+.fancytree-custom-icon {
+  font-size: 1.25em !important;
+}
+
+.tree-wrapper .unhoist-button {
+  font-size: 150% !important;
+}
+
 /* Let's gooder up the menu button, Bubbs. */
 body .global-menu-button:not(:hover) {
   background-color: transparent;
-  filter: invert(50%) sepia(100%) hue-rotate(calc((var(--palette-accent-hue) - 52) * 1deg)) saturate(2500%) brightness(85%);
+  filter: invert(50%) sepia(100%)
+    hue-rotate(calc((var(--palette-accent-hue) - 52) * 1deg)) saturate(2500%)
+    brightness(85%);
   width: 41px;
   margin-left: 6px;
 }
 
-/* Below selectors are used only for Sharing mode. */
+/* Below selectors are for Sharing mode. */
 body[data-note-id] {
   background-color: var(--launcher-pane-background-color);
   color: var(--launcher-pane-text-color);
-  font-family: 'Arial';
+  font-family: var(--main-font-family);
 }
 
 body[data-note-id] #layout {
@@ -201,5 +246,4 @@ body[data-note-id] a {
 
 body[data-note-id] pre {
   padding: 1em;
-  filter: invert(100%);
 }

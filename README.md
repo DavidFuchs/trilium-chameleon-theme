@@ -1,6 +1,6 @@
 # trilium-chameleon-theme
 
-Chameleon: A custom colour theme for Trilium. (https://github.com/zadam/trilium)
+Chameleon: A custom colour theme for Trilium Next. (https://github.com/TriliumNext)
  
 These light and dark themes makes liberal use of variables and relative brightness calculations to provide a theme that's both easy on the eyes, and very simple to adjust to your preference. Accent colors, text colors, and background colors are all easily adjustable.
  
